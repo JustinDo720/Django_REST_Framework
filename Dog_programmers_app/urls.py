@@ -9,7 +9,6 @@ router.register(Dog, DogViewSet)
 router.register(ProgrammingLanguage, ProgrammingLanguageViewSet)
 
 urlpatterns = [
-    path('api-info/', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls)),
     path('', views.index, name='index')
 ]
