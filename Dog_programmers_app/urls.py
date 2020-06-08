@@ -9,6 +9,6 @@ router.register('Dog', DogViewSet)
 router.register('ProgrammingLanguage', ProgrammingLanguageViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('home/', views.index, name='index')
+    path('rest_api/', include(router.urls)),
+    path('', views.index, name='index')
 ]
