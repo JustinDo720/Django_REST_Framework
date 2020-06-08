@@ -5,10 +5,10 @@ from .views import DogViewSet, ProgrammingLanguageViewSet
 from .models import Dog, ProgrammingLanguage
 
 router = routers.DefaultRouter()
-router.register(Dog, DogViewSet)
-router.register(ProgrammingLanguage, ProgrammingLanguageViewSet)
+router.register('Dog', DogViewSet)
+router.register('ProgrammingLanguage', ProgrammingLanguageViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('', views.index, name='index')
+    path('home/', views.index, name='index')
 ]
